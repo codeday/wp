@@ -12,6 +12,7 @@ ADD https://github.com/AdvancedCustomFields/acf/archive/${WP_PLUGIN_ACF_VERSION}
 ADD https://github.com/wp-graphql/wp-graphql/archive/${WP_PLUGIN_GRAPHQL_VERSION}.tar.gz /usr/src/wordpress/wp-content/plugins/
 ADD https://github.com/wp-graphql/wp-graphql-acf/archive/${WP_PLUGIN_GRAPHQL_ACF_VERSION}.tar.gz /usr/src/wordpress/wp-content/plugins/
 ADD https://github.com/awesomemotive/WP-Mail-SMTP/archive/${WP_PLUGIN_SMTP_VERSION}.tar.gz /usr/src/wordpress/wp-content/plugins/
+ADD https://downloads.wordpress.org/plugin/auth0.${WP_PLUGIN_AUTH0_VERSION}.zip /usr/src/wordpress/wp-content/plugins/
 
 RUN cd /usr/src/wordpress/wp-content/plugins \
   && for a in `ls -1 *.tar.gz`; do tar xzf $a; done \
