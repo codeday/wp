@@ -1,6 +1,6 @@
 FROM wordpress:5.4
 
-RUN apt-get update && apt-get install unzip
+RUN apt-get update && apt-get install unzip cron
 
 ENV WP_PLUGIN_GRAPHQL_VERSION v0.8.4
 ENV WP_PLUGIN_GRAPHQL_ACF_VERSION v0.3.3
@@ -22,3 +22,5 @@ RUN cd /usr/src/wordpress/wp-content/plugins \
   && for a in `ls -1 *.zip`; do unzip $a; done
 
 COPY themes/noop /usr/src/wordpress/wp-content/themes/noop
+
+COPY uploads.ini /usr/local/etc/php/conf.d/uploads.ini
