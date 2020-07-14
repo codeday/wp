@@ -1,6 +1,6 @@
 FROM wordpress:5.4
 
-RUN apt-get update && apt-get install unzip cron
+RUN apt-get update && apt-get install -y unzip cron
 
 ENV WP_PLUGIN_GRAPHQL_VERSION v0.8.4
 ENV WP_PLUGIN_GRAPHQL_ACF_VERSION v0.3.3
